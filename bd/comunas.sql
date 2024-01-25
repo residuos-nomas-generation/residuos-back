@@ -1,5 +1,5 @@
 INSERT INTO
-    Comunas (ID, Descripcion)
+    Comunas (id, descripcion_comuna)
 VALUES
     (1, "Iquique"),
     (1, "Alto Hospicio"),
