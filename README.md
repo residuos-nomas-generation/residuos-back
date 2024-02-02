@@ -8,10 +8,9 @@ Miembros:
 - [Camila Concha](https://github.com/CamiCCode)
 - [Rodrigo González](https://github.com/rigozdev)
 
-
 ## Descripción
 
-Repositorio backend para proyecto integrador **Residuos NoMás**. Aquí podrás encontrar información acerca de endpoints, arquitectura utilizada (mvc), tecnologías utilizadas y también cómo poner en marcha este repo. 
+Repositorio backend para proyecto integrador **Residuos NoMás**. Aquí podrás encontrar información acerca de endpoints, arquitectura utilizada (mvc), tecnologías utilizadas y también cómo poner en marcha este repo.
 
 <!-- ## Repositorios y despliegue -->
 
@@ -27,12 +26,9 @@ Repositorio backend para proyecto integrador **Residuos NoMás**. Aquí podrás 
 
 <!-- ## Dependencias -->
 
-
 ## Frontend
 
 - [Aquí](https://github.com/residuos-nomas-generation/residuos-front) encontrarás toda la información acerca del **frontend** de nuestro proyecto. Échale un vistazo!
-
-
 
 ## Feedback
 
