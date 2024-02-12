@@ -34,7 +34,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`Usuario` (
   `id_usuario` VARCHAR(45) NOT NULL,
   `nombre_usuario` VARCHAR(16) NOT NULL,
-  `apelliido_usuario` VARCHAR(45) NOT NULL,
+  `apellido_usuario` VARCHAR(45) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
   `contrasenha` VARCHAR(32) NOT NULL,
   `fecha_creacion` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

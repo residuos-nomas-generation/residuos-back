@@ -1,11 +1,13 @@
 package com.generation.backendproject.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "usuarios")
+@Data
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +30,5 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "rolUsuarioId")
     private RolUsuario rolUsuarioId;
+
 }
