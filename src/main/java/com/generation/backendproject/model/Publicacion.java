@@ -28,6 +28,7 @@ public class Publicacion {
 
     @Column(name = "cantidad")
     private Integer cantidad;
+  
     @Column(name = "precio")
     private Integer precio;
 

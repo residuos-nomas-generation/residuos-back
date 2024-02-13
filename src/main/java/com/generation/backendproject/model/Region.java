@@ -13,5 +13,4 @@ public class Region {
     @Column(name = "descripcion_region", nullable = false, length = 100)
     private String descripcionRegion;
 
-
 }
