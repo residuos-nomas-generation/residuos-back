@@ -16,3 +16,4 @@ public class EstadoResiduo {
     private String descripcionEstadoResiduo;
 
 }
+

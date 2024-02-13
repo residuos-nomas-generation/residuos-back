@@ -15,4 +15,5 @@ public class VigenciaPublicacion {
 
     @Column(name = "descripcion_vigencia", nullable = false, length = 100)
     private String descripcionVigencia;
+
 }

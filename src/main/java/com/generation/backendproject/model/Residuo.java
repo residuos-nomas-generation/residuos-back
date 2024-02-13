@@ -19,4 +19,5 @@ public class Residuo {
     @ManyToOne
     @JoinColumn(name="Estado_residuos_id_estado_residuos")
     private EstadoResiduo estadoResiduo;
+
 }
