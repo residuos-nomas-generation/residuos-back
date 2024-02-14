@@ -1,9 +1,9 @@
 package com.generation.backendproject.service;
 
 import com.generation.backendproject.model.Usuario;
-import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
+// import jakarta.transaction.Transactional;
+// import lombok.AllArgsConstructor;
+// import org.springframework.stereotype.Service;
 
 
 public interface UsuarioService {
