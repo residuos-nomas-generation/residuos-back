@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "usuarios")
@@ -31,4 +32,18 @@ public class Usuario {
     @JoinColumn(name = "rolUsuarioId")
     private RolUsuario rolUsuarioId;
 
+    public Usuario(String usuarioNombre, String usuarioApellido, String email, String contrasenha, RolUsuario rolUsuario) {
+        this.usuarioNombre = usuarioNombre;
+        this.usuarioApellido = usuarioApellido;
+        this.email = email;
+        this.contrasenha = contrasenha;
+        this.fechaCreación = new Date(); // Si necesitas establecer la fecha de creación automáticamente
+        this.rolUsuarioId = rolUsuario;
+    }
+    public Usuario() {
+
+    }
+
+    public Usuario(String nombre, String apellido, String email, String contrasenha) {
+    }
 }
