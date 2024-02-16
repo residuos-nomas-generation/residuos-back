@@ -15,8 +15,6 @@ import java.util.List;
 @RequestMapping
 @RestController
 @AllArgsConstructor
-
-
 public class PublicacionController {
 
     private  final PublicacionServiceImpl publicacionService;
@@ -31,4 +29,5 @@ public class PublicacionController {
         List<Publicacion> listaDePublicaciones = publicacionService.listarPublicaciones();
         return new ResponseEntity<>(listaDePublicaciones, HttpStatus.OK);
     }
+
 }

@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface RolUsuarioRepository extends JpaRepository<RolUsuario, Long> {
 
 
+    RolUsuario findByDescripcionRol(String rolUsuario);
+
+    boolean existsByDescripcionRol(String usuario);
 }

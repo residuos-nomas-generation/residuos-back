@@ -1,9 +1,11 @@
 package com.generation.backendproject.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "rol_usuarios")
 public class RolUsuario {
@@ -15,4 +17,12 @@ public class RolUsuario {
     private String descripcionRol;
     @OneToMany(mappedBy = "rolUsuarioId")
     private List<Usuario> usuarios;
+
+    public RolUsuario(String descripcionRol) {
+        this.descripcionRol = descripcionRol;
+    }
+
+    public RolUsuario() {
+
+    }
 }
