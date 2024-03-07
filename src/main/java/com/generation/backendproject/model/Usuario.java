@@ -64,7 +64,14 @@ public class Usuario {
 
 
     public Usuario(String nombre, String apellido, String email, String contrasenha, RolUsuario rolUsuario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.contrasenha = contrasenha;
+        this.rolUsuarioId = rolUsuario;
+        this.fechaCreacion = new Date(); // Puedes establecer la fecha de creación aquí si es necesario
     }
+
 }
 
 
