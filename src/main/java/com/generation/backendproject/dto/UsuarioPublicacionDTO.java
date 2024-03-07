@@ -22,4 +22,8 @@ public class UsuarioPublicacionDTO {
         this.telefono = telefono;
         this.direccion = direccion;
     }
+
+    public UsuarioPublicacionDTO() {
+
+    }
 }

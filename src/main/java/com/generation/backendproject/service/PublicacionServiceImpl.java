@@ -119,12 +119,51 @@ public class PublicacionServiceImpl implements PublicacionService {
         publicacion.setUnidadMedida(crearPublicacionDTO.getUnidadMedida());
         publicacion.setUsuario(user);
 
-        publicacion=publicacionRepository.save(publicacion);
+        publicacion = publicacionRepository.save(publicacion);
 
-        //PublicacionDTO publicacionDTO = conve
-        //FALTA COMPLETAR
+        // Aquí es donde conviertes la entidad Publicacion a PublicacionDTO
+        PublicacionDTO publicacionDTO = convertEntityToDto(publicacion);
 
-        return null;
+        return publicacionDTO;
+    }
+
+    public PublicacionDTO convertEntityToDto(Publicacion publicacion) {
+        PublicacionDTO publicacionDTO = new PublicacionDTO();
+    publicacionDTO.setIdPublicacion(publicacion.getIdPublicacion());
+    publicacionDTO.setTitulo(publicacion.getTitulo());
+    publicacionDTO.setCuerpo(publicacion.getCuerpo());
+    publicacionDTO.setImagen(publicacion.getImagen());
+    publicacionDTO.setResiduo(publicacion.getResiduo());
+    publicacionDTO.setPrecio(publicacion.getPrecio());
+    publicacionDTO.setUnidadMedida(publicacion.getUnidadMedida());
+
+    UsuarioPublicacionDTO usuarioDTO = new UsuarioPublicacionDTO();
+    usuarioDTO.setIdUsuario(publicacion.getUsuario().getIdUsuario());
+    usuarioDTO.setNombre(publicacion.getUsuario().getNombre());
+    usuarioDTO.setApellido(publicacion.getUsuario().getApellido());
+    usuarioDTO.setEmail(publicacion.getUsuario().getEmail());
+    usuarioDTO.setTelefono(publicacion.getUsuario().getTelefono());
+    usuarioDTO.setDireccion(publicacion.getUsuario().getDireccion());
+
+    publicacionDTO.setUsuario(usuarioDTO);  // Aquí estableces el campo usuario de PublicacionDTO
+
+    return publicacionDTO;
+
+        // PublicacionDTO publicacionDTO = new PublicacionDTO();
+        // publicacionDTO.setIdPublicacion(publicacion.getIdPublicacion());
+        // publicacionDTO.setTitulo(publicacion.getTitulo());
+        // publicacionDTO.setCuerpo(publicacion.getCuerpo());
+        // publicacionDTO.setImagen(publicacion.getImagen());
+        // publicacionDTO.setResiduo(publicacion.getResiduo());
+        // publicacionDTO.setPrecio(publicacion.getPrecio());
+        // publicacionDTO.setUnidadMedida(publicacion.getUnidadMedida());
+
+        // UsuarioPublicacionDTO usuaPubliDTO = new UsuarioPublicacionDTO();
+        // usuaPubliDTO.setIdUsuario(publicacion.getUsuario().getIdUsuario());
+        // // Aquí también deberías llenar los campos del DTO relacionados con el
+        // Usuario
+
+        // return publicacionDTO;
     }
 
     // @Override
