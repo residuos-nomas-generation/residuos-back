@@ -1,6 +1,6 @@
 package com.generation.backendproject.dto;
 
-import lombok.AllArgsConstructor;
+// import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 

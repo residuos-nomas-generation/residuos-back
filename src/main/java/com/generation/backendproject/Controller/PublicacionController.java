@@ -2,23 +2,28 @@ package com.generation.backendproject.Controller;
 
 import com.generation.backendproject.model.Publicacion;
 import com.generation.backendproject.service.PublicacionServiceImpl;
+import com.generation.backendproject.service.UsuarioService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
+//deshabilitamos cors
+@CrossOrigin("*")
 
-@RequestMapping
 @RestController
 @AllArgsConstructor
 
 public class PublicacionController {
 
+    //@Autowired
+    //private UsuarioService usuaService;
     private final PublicacionServiceImpl publicacionService;
+
+    
 
     @GetMapping("/publicacion/lista")
     public ResponseEntity<List<Publicacion>> listarPublicaciones() {
@@ -35,5 +40,7 @@ public class PublicacionController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
 
 }

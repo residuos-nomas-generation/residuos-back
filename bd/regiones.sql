@@ -1,4 +1,4 @@
-INSERT INTO Region (id_region, descripcion_region)
+INSERT INTO Region (id_region, nombre_region)
 VALUES (1, 'Tarapacá'),
        (2, 'Antofagasta'),
        (3, 'Atacama'),
