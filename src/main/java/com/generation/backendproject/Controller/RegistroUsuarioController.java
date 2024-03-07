@@ -1,7 +1,7 @@
 package com.generation.backendproject.Controller;
 
 import com.generation.backendproject.dto.UsuarioRegistroDTO;
-import com.generation.backendproject.service.UsuarioService;
+// import com.generation.backendproject.service.UsuarioService;
 import com.generation.backendproject.service.UsuarioServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -29,6 +29,8 @@ public class RegistroUsuarioController {
         UsuarioRegistroDTO usuarioNuevo = usuarioService.guardarUsuario(usuarioParaGuardar);
         return new ResponseEntity<>(usuarioNuevo, HttpStatus.CREATED);
     }
+
+
 
 
 }

@@ -1,10 +1,27 @@
 package com.generation.backendproject.repository;
 
-import com.generation.backendproject.model.Usuario;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.Optional;
 
-@Repository
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.generation.backendproject.model.Usuario;
+
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    Usuario findByEmail(String correo);
+    Optional<Usuario> findById(Long idUsuario);
 }
+
+// ********************************************************************** */
+// Codigo antiguo
+
+
+// import com.generation.backendproject.model.Usuario;
+// import org.springframework.data.jpa.repository.JpaRepository;
+// import org.springframework.stereotype.Repository;
+
+// @Repository
+// public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+// Usuario findByEmail(String correo);
+
+// Usuario findByIdUsuario(Long id);
+// //Usuario obtenerUsuarioPorId(Long id);
+// }

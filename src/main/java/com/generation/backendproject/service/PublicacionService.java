@@ -1,10 +1,35 @@
 package com.generation.backendproject.service;
 
-import com.generation.backendproject.model.Publicacion;
-
 import java.util.List;
 
+import com.generation.backendproject.dto.PublicacionDTO;
+import com.generation.backendproject.model.Publicacion;
+
 public interface PublicacionService {
-    Publicacion obtenerPublicacionPorId(Long id);
-    List<Publicacion> listarPublicaciones();
+    List<PublicacionDTO> getAllPublicaciones();
+    List<PublicacionDTO> getPublicacionesByUsuario(Long idUsuario);
+    List<Publicacion> findByUsuarioIdUsuario(Long idUsuario);
+    PublicacionDTO getPublicacionByUsuarioAndId(Long idUsuario, Long idPublicacion);
+    // Publicacion findByUsuarioIdUsuarioAndIdPublicacion(Long idUsuario, Long idPublicacion);
+    // PublicacionDTO addPublicacion(Long idUsuario, PublicacionDTO publicacionDTO);
+
 }
+
+
+// ********************************************************************** */
+// Codigo antiguo
+
+
+// import com.generation.backendproject.model.Publicacion;
+
+// import java.util.List;
+
+// public interface PublicacionService {
+//     Publicacion obtenerPublicacionPorId(Long id);
+//     List<Publicacion> listarPublicaciones();
+
+//     //public Publicacion savePublicacion(Publicacion publicacion);
+
+//     //public PublicacionCreacionDTO guardarPublicacion(PublicacionCreacionDTO publicacionDTO);
+// }
+
