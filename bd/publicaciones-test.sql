@@ -11,9 +11,9 @@ VALUES(1, "Rodrigo", "Gonzalez", "rigoz@live.cl", "*###*as", "Valle Central 204"
 
 --3
 INSERT INTO publicacion(id_publicacion, cuerpo, imagen, precio, residuo, titulo, id_comuna, unidad_medida, id_usuario) 
-VALUES(1, "Lote de palos en buenas condiciones", "imagen.jpg", 20000, "Madera", "Madera en buen estado", "m", 290, 1),
-VALUES(2, "Marcos de ventana tamaño grando", "imagen.jpg", 35000, "Aluminio", "Marcos de ventana", "m²", 291, 1),
-(3, "Planchas de zinc", "imagen.jpg", 10000, "Zinc", "Techo", "m²", 290, 2);
+VALUES(1, "Lote de palos en buenas condiciones", "imagen.jpg", 20000, "Madera", "Madera en buen estado", 290, "m", 1),
+(2, "Marcos de ventana tamaño grando", "imagen.jpg", 35000, "Aluminio", "Marcos de ventana", 291, "m²", 1),
+(3, "Planchas de zinc", "imagen.jpg", 10000, "Zinc", "Techo", 290, "m²", 2);
 
 
 

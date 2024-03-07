@@ -32,10 +32,10 @@ public class UsuarioController {
     }
 
 
-    @GetMapping("/usuario")
-    public ResponseEntity<Usuario> obtener(@RequestParam String email) {
-        return new ResponseEntity<>(usuarioService.obtenerUsuarioPorCorreo(email), HttpStatus.OK);
-    }
+    // @GetMapping("/usuario")
+    // public ResponseEntity<Usuario> obtener(@RequestParam String email) {
+    //     return new ResponseEntity<>(usuarioService.obtenerUsuarioPorCorreo(email), HttpStatus.OK);
+    // }
 
 
 
