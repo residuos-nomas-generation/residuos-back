@@ -6,22 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.generation.backendproject.model.Usuario;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-    Optional<Usuario> findById(Long idUsuario);
-}
+import org.springframework.stereotype.Repository;
 
-// ********************************************************************** */
-// Codigo antiguo
+ @Repository
+ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+ Usuario findByEmail(String correo);
 
-
-// import com.generation.backendproject.model.Usuario;
-// import org.springframework.data.jpa.repository.JpaRepository;
-// import org.springframework.stereotype.Repository;
-
-// @Repository
-// public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-// Usuario findByEmail(String correo);
-
-// Usuario findByIdUsuario(Long id);
-// //Usuario obtenerUsuarioPorId(Long id);
-// }
+ Usuario findByIdUsuario(Long id);
+ //Usuario obtenerUsuarioPorId(Long id);
+     Optional<Usuario> findById(Long idUsuario);
+ }
