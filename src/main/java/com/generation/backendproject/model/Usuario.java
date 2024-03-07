@@ -61,6 +61,10 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Publicacion> publicaciones;
+
+
+    public Usuario(String nombre, String apellido, String email, String contrasenha, RolUsuario rolUsuario) {
+    }
 }
 
 
