@@ -2,6 +2,7 @@ package com.generation.backendproject.service;
 
 import java.util.List;
 
+import com.generation.backendproject.dto.CrearPublicacionDTO;
 import com.generation.backendproject.dto.PublicacionDTO;
 import com.generation.backendproject.model.Publicacion;
 
@@ -13,6 +14,9 @@ public interface PublicacionService {
     // Publicacion findByUsuarioIdUsuarioAndIdPublicacion(Long idUsuario, Long idPublicacion);
     // PublicacionDTO addPublicacion(Long idUsuario, PublicacionDTO publicacionDTO);
 
+
+    //Crear publicación
+    PublicacionDTO savePublicacion(CrearPublicacionDTO crearPublicacionDTO);
 }
 
 

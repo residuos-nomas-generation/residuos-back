@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.generation.backendproject.dto.CrearPublicacionDTO;
 import com.generation.backendproject.dto.PublicacionDTO;
 import com.generation.backendproject.dto.UsuarioPublicacionDTO;
 import com.generation.backendproject.model.Publicacion;
+import com.generation.backendproject.model.Usuario;
 import com.generation.backendproject.repository.PublicacionRepository;
 import com.generation.backendproject.repository.UsuarioRepository;
 
@@ -98,6 +100,31 @@ public class PublicacionServiceImpl implements PublicacionService {
                 publicacion.getUnidadMedida(),
                 usuarioDTO);
         return publicacionDTO;
+    }
+
+    @Override
+    public PublicacionDTO savePublicacion(CrearPublicacionDTO crearPublicacionDTO) {
+        Usuario user = usuarioRepository.findById(crearPublicacionDTO.getIdUsuario()).orElse(null);
+        if (user == null) {
+            System.out.println("Usuario es null");
+            return null;
+        }
+
+        Publicacion publicacion = new Publicacion();
+        publicacion.setTitulo(crearPublicacionDTO.getTitulo());
+        publicacion.setCuerpo(crearPublicacionDTO.getCuerpo());
+        publicacion.setImagen(crearPublicacionDTO.getImagen());
+        publicacion.setResiduo(crearPublicacionDTO.getResiduo());
+        publicacion.setPrecio(crearPublicacionDTO.getPrecio());
+        publicacion.setUnidadMedida(crearPublicacionDTO.getUnidadMedida());
+        publicacion.setUsuario(user);
+
+        publicacion=publicacionRepository.save(publicacion);
+
+        //PublicacionDTO publicacionDTO = conve
+        //FALTA COMPLETAR
+
+        return null;
     }
 
     // @Override
