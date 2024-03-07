@@ -17,6 +17,7 @@ public interface PublicacionService {
 
     //Crear publicación
     PublicacionDTO savePublicacion(CrearPublicacionDTO crearPublicacionDTO);
+    PublicacionDTO convertEntityToDto(Publicacion publicacion);
 }
 
 
