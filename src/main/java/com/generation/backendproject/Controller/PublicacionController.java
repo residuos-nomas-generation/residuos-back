@@ -6,18 +6,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.generation.backendproject.dto.CrearPublicacionDTO;
 import com.generation.backendproject.dto.PublicacionDTO;
 import com.generation.backendproject.service.PublicacionService;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1")
 public class PublicacionController {
     @Autowired
@@ -29,9 +25,10 @@ public class PublicacionController {
         return new ResponseEntity<>(publicacionDTOs, HttpStatus.OK);
     }
 
-    @PostMapping("/publicaciones")
+    @PostMapping("/publicacion")
     public ResponseEntity<PublicacionDTO> crearPublicacion(@RequestBody CrearPublicacionDTO crearPublicacionDTO) {
         PublicacionDTO publicacionDTO = publicacionService.savePublicacion(crearPublicacionDTO);
+        System.out.println("si entré");
         return ResponseEntity.ok(publicacionDTO);
     }
 
